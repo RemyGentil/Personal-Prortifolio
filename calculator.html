@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#f2f2f2;
+}
+
+.top{
+    background:#022827;
+    color:white;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.top1{
+    display:flex;
+    align-items:center;
+}
+
+.top1 img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    margin-right:10px;
+}
+
+.nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:10px;
+    font-size:14px;
+}
+
+.main{
+    max-width:500px;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0px 2px 8px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+    color:#022827;
+    margin-bottom:20px;
+}
+
+label{
+    font-weight:bold;
+    display:block;
+    margin-top:15px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    background:#022827;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+.menu-toggle{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+
+.result{
+    margin-top:20px;
+    background:#e6f2f2;
+    padding:15px;
+    border-radius:5px;
+    text-align:center;
+    font-weight:bold;
+    color:#006666;
+}
+
+.error{
+    color:red;
+    margin-top:10px;
+    text-align:center;
+}
+
+.end{
+    background:#022827;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+@media(max-width:800px){
+    .main{
+        flex-direction:column;
+    }
+    .nav{
+        display:none;
+        flex-direction:column;
+        background:#022827;
+        position:absolute;
+        top:60px;
+        right:0;
+        width:200px;
+        padding:10px;
+        border-radius:5px;
+    }
+    .nav a{
+        margin:8px 0;
+    }
+    .menu-toggle{
+        display:block;
+        color:white;
+    }
+}
+</style>
+
+<body>
+
+<div class="top">
+    <div class="top1">
+        <img src="img/profile.jpg">
+        <h2>My Portfolio</h2>
+    </div>
+<div class="menu-toggle" id="menuToggle">&#9776;</div>
+    <div class="nav" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about_me.html">About</a>
+        <a href="teck_skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+<div class="main">
+
+    <h1>Loan Repayment Calculator</h1>
+
+    <label>Loan Amount</label>
+    <input type="number" id="amount" placeholder="Enter loan amount">
+
+    <label>Interest Rate (%)</label>
+    <input type="number" id="interest" placeholder="Enter interest rate">
+
+    <label>Number of Months</label>
+    <input type="number" id="months" placeholder="Enter months">
+
+    <button onclick="calculateLoan()">Calculate Payment</button>
+
+    <div class="error" id="error"></div>
+    <div class="result" id="result"></div>
+
+</div>
+
+<div class="end">
+    © 2026 Remy Gentil
+</div>
+
+<script>
+function calculateLoan(){
+    var amount = document.getElementById("amount").value;
+    var interest = document.getElementById("interest").value;
+    var months = document.getElementById("months").value;
+
+    var error = document.getElementById("error");
+    var result = document.getElementById("result");
+
+    error.innerHTML = "";
+    result.innerHTML = "";
+
+    if(amount === "" || interest === "" || months === ""){
+        error.innerHTML = "Please fill in all fields.";
+        return;
+    }
+
+    if(amount <= 0 || interest <= 0 || months <= 0){
+        error.innerHTML = "Values must be greater than zero.";
+        return;
+    }
+
+    var totalInterest = (amount * interest) / 100;
+    var totalPay = Number(amount) + totalInterest;
+    var monthlyPay = totalPay / months;
+
+    result.innerHTML = 
+        "Monthly Payment: " + monthlyPay.toFixed(2);
+}
+const menuBtn = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuBtn.addEventListener("click", function(){
+    if(navMenu.style.display === "flex"){
+        navMenu.style.display = "none";
+    } else {
+        navMenu.style.display = "flex";
+    }
+});
+
+</script>
+
+</body>
+</html>
