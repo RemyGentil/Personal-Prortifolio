@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+
+<div class="top">
+    <div class="top1">
+        <img src="assets/images/profile.jpg" alt="Profile Picture">
+        <h2>My Portfolio</h2>
+    </div>
+
+     <div class="menu-toggle" id="menuToggle">&#9776;</div>
+
+    
+    <div class="nav" id="navMenu">
+        <a href="#" onclick="loadPage('home')">Home</a>
+        <a href="#" onclick="loadPage('about')">About Me</a>
+        <a href="#" onclick="loadPage('skills')">Skills</a>
+        <a href="#" onclick="loadPage('projects')">Projects</a>
+        <a href="#" onclick="loadPage('calculator')">Calculator</a>
+        <a href="#" onclick="loadPage('cv')">CV</a>
+        <a href="#" onclick="loadPage('contact')">Contact</a>
+    </div>
+</div>
+
+<div class="main_for_home">
+    <section id="home" class="active">
+    <div class="box_home">
+
+        <img src="assets/images/profile.jpg" alt="Profile Picture">
+
+        <h3>ISHIMWE Remy Gentil</h3>
+        <p>Hello! I am a student learning web development. I love making Nice looking websites and trying fun experiments.</p>
+        <div>
+            <span class="sklz_dtlz">Learning HTML</span>
+            <span class="sklz_dtlz">CSS Fun</span>
+            <span class="sklz_dtlz">JS Practice</span>
+        </div>
+    </div>
+
+    <div class="box_home">
+        <h1>Hello!</h1>
+        <p class="role">Frontend Developer</p>
+        <p> I build simple and responsive websites.<br>
+            I enjoy clean layouts and easy navigation.<br>
+            I also create little fun projects to practice coding.</p>
+        <a href="projects.html" class="btn">View My Work</a>
+    </div>
+
+    <div class="box_home">
+        <h2>What I Do</h2>
+            <p>
+                • Responsive Web Design<br><br>
+                • HTML, CSS & JavaScript<br><br>
+                • Clean UI Layouts<br><br>
+                • Beginner-friendly & scalable code
+            </p>
+        <div>
+            <span class="sklz_dtlz">Fun Project</span>
+            <span class="sklz_dtlz">Practice</span>
+        </div>
+    </div>
+
+</div>
+</section>
+<!-- about me -->
+<section id="about">
+<div class="main_about">
+
+    <h1>About Me</h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Background</h3>
+            <p>
+                I am a student who enjoys building websites and learning new technologies.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Program & Year</h3>
+            <p>
+                Software Development<br>
+                Year Two
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Career Goal</h3>
+            <p>
+                To become a skilled frontend developer and build useful web applications.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="skills">
+        <h2>My Skills</h2>
+        <ul class="skills_list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Responsive Design</li>
+            <li>Git Basics</li>
+            <li>Problem Solving</li>
+        </ul>
+    </div>
+
+</div>
+</section>
+
+<!-- skills -->
+<section id="skills">
+<div class="main_tech_skllz">
+
+    <h1>Technical Skills</h1>
+
+    <div class="skills-grid">
+
+        <div class="evry_single_skill">
+            <h3>HTML Codes</h3>
+            <span>Advanced</span>
+        </div>
+
+        <div class="evry_single_skill">
+            <h3>CSS</h3>
+            <span>Advanced</span>
+        </div>
+
+        <div class="evry_single_skill">
+            <h3>JavaScript</h3>
+            <span>Intermediate</span>
+        </div>
+
+        <div class="evry_single_skill">
+            <h3>GitHub</h3>
+            <span>Intermediate</span>
+        </div>
+
+        <div class="evry_single_skill">
+            <h3>Bootstrap</h3>
+            <span>Intermediate</span>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- projects -->
+<section id="projects">
+<div class="main_for_projects">
+
+    <h1>My Projects</h1>
+
+    <div class="project-card">
+        <img src="assets/images/project1.png" alt="Portfolio">
+        <div class="project-info">
+            <h3>Hotel room booking App</h3>
+            <p><strong>Problem Solved:</strong> Guests can easyly see available rooms and book ones which meets their financial status.</p>
+            <p><strong>Technologies:</strong> HTML, CSS, PHP, MYSQL</p>
+            <a href="https://remygentil.github.io/Hotel-Room-BookingApp/" target="_blank">View on GitHub</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="assets/images/project2.png" alt="Todo List">
+        <div class="project-info">
+            <h3>Todo List App</h3>
+            <p><strong>Problem Solved:</strong> Help users manage daily tasks with add, edit, and delete functions.</p>
+            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+            <a href="https://remygentil.github.io/Todo-App/" target="_blank">View on GitHub</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="assets/images/project3.png" alt="Choire Website">
+        <div class="project-info">
+            <h3>Blessing Key Choir Website</h3>
+            <p><strong>Problem Solved:</strong> It allows people who wants to join this choir do it online. and Singers also get updates via the site</p>
+            <p><strong>Technologies:</strong> HTML, CSS, PHP, MYSQL</p>
+            <a href="https://blessingkeychoir.gt.tc/" target="_blank">VIsit Site</a>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- calculator -->
+<section id="calculator">
+<div class="main_calculator">
+
+    <h1>Loan Repayment Calculator</h1>
+
+    <label>Loan Amount</label>
+    <input type="number" id="amount" placeholder="Enter loan amount">
+
+    <label>Interest Rate (%)</label>
+    <input type="number" id="interest" placeholder="Enter interest rate">
+
+    <label>Number of Months</label>
+    <input type="number" id="months" placeholder="Enter months">
+
+    <button onclick="calculateLoan()">Calculate Payment</button>
+
+    <div class="error" id="error"></div>
+    <div class="result" id="result"></div>
+
+</div>
+</section>
+
+<!-- cv -->
+<section id="cv">
+<div class="main">
+<div class="box">
+
+<div class="name">Remy Gentil</div>
+<div class="role">Software Development Student</div>
+
+<p>
+Email: remygentil@email.com <br>
+Location: Musanze, Rwanda
+</p>
+
+<div class="section">
+<h3>Profile</h3>
+<p>
+I am a university student studying software development.
+I build simple and responsive websites.
+I learn by practicing every day.
+</p>
+</div>
+
+<div class="section">
+<h3>Education</h3>
+<p>
+University of Ines Ruhengeri <br>
+Program: Software Development <br>
+Year: Two
+</p>
+</div>
+
+<div class="section">
+<h3>Technical Skills</h3>
+<ul>
+<li>HTML page structure</li>
+<li>CSS layout and spacing</li>
+<li>JavaScript basic logic</li>
+<li>Responsive web design</li>
+<li>GitHub code storage</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>Projects</h3>
+<p>
+Portfolio website, GPA calculator, todo list system.
+</p>
+</div>
+
+<div class="section">
+<h3>Career Goal</h3>
+<p>
+To become a professional software developer and build useful systems.
+</p>
+</div>
+
+
+<div class="download">
+    <a href="assets/RemyGentilCV.pdf" download="Remy_Gentil_CV.pdf">
+        <button>Download My CV</button>
+    </a>
+</div>
+
+</div>
+</div>
+
+</section>
+<!-- contacts -->
+
+<section id="contact">
+<div class="main_contacts">
+
+<div class="box">
+<h1>Contact Me</h1>
+
+<form class="form" onsubmit="return checkForm()">
+<input type="text" id="name" placeholder="Your Name">
+<input type="email" id="email" placeholder="Your Email">
+<textarea id="message" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+</div>
+
+<div class="sidebar">
+<h3>Let's Connect!</h3>
+<p>You can reach me through email, phone, or social media. I usually respond quickly.</p>
+<p><strong>Email:</strong> remygentil2@email.com</p>
+<p><strong>Phone:</strong> +250 791857689</p>
+<p><strong>GitHub:</strong> <a href="https://github.com/RemyGentil">Visit My GitHub Account</a></p>
+<p><strong>LinkedIn:</strong> <a href="#">Visit LinkedIn Account</a></p>
+<p> Write a short and clear message I'll respond Ur damn Message faster!</p>
+</div>
+
+</div>
+
+<a href="https://wa.me/250791857689" class="whatsapp">Text me on WhatsApp</a>
+</section>
+
+
+<div class="end">
+    &copy; 2026 Remy Gentil
+</div>
+<p></p>
+<script src="js/main.js"></script>
+ </body>
+</html>
